@@ -1,32 +1,16 @@
-#
-# Be sure to run `pod lib lint WTCarouselFlowLayout.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = 'WTCarouselFlowLayout'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of WTCarouselFlowLayout.'
+  s.summary          = 'To use collectView show carousel list.'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.description      = 'WTCarouselFlowLayout one kind of collectView layout to show carousel list.'
 
   s.homepage         = 'https://github.com/1206860151@qq.com/WTCarouselFlowLayout'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '1206860151@qq.com' => 'wentianen@xingshulin.com' }
   s.source           = { :git => 'https://github.com/1206860151@qq.com/WTCarouselFlowLayout.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'http://www.jianshu.com/u/d83ef9913d22'
 
   s.ios.deployment_target = '8.0'
 
