@@ -21,18 +21,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epS-da-MNq">
-                                <rect key="frame" x="0.0" y="28" width="375" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epS-da-MNq">
+                                <rect key="frame" x="0.0" y="28" width="375" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nZz-8M-McL">
-                                <rect key="frame" x="0.0" y="108" width="375" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZz-8M-McL">
+                                <rect key="frame" x="0.0" y="68.5" width="375" height="128"/>
                                 <color key="backgroundColor" red="0.13715925812721252" green="0.74240368604660034" blue="0.93862324953079224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <collectionViewLayout key="collectionViewLayout" id="d50-A9-g93" customClass="WTCarouselFlowLayout" customModule="WTCarouselFlowLayout"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Pcj-5J-OfC"/>
+                                </constraints>
+                                <collectionViewLayout key="collectionViewLayout" id="acm-Fh-UC9" customClass="WTCarouselFlowLayout" customModule="WTCarouselFlowLayout"/>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="eaW-Op-9KY" customClass="CollectionViewCell" customModule="WTCarouselFlowLayout_Example" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -49,15 +50,25 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="gWd-x0-SEa"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jts-gm-qf7">
-                                <rect key="frame" x="16" y="261" width="343" height="280"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jts-gm-qf7">
+                                <rect key="frame" x="16" y="216.5" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jts-gm-qf7" firstAttribute="top" secondItem="nZz-8M-McL" secondAttribute="bottom" constant="20" id="7v0-JR-QVS"/>
+                            <constraint firstItem="nZz-8M-McL" firstAttribute="top" secondItem="epS-da-MNq" secondAttribute="bottom" constant="20" id="8yD-me-C4C"/>
+                            <constraint firstItem="nZz-8M-McL" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="YL5-gD-1XU"/>
+                            <constraint firstItem="jts-gm-qf7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="YTO-zd-Cw4"/>
+                            <constraint firstItem="epS-da-MNq" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Zc1-Ly-Og4"/>
+                            <constraint firstItem="epS-da-MNq" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="jXq-re-BLx"/>
+                            <constraint firstAttribute="trailing" secondItem="nZz-8M-McL" secondAttribute="trailing" id="pn3-F7-lin"/>
+                            <constraint firstAttribute="trailing" secondItem="jts-gm-qf7" secondAttribute="trailing" constant="16" id="thn-mL-BfT"/>
+                            <constraint firstAttribute="trailing" secondItem="epS-da-MNq" secondAttribute="trailing" id="uSn-1I-KMT"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="nZz-8M-McL" id="zZm-lA-d5r"/>
