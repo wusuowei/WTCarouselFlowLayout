@@ -1,0 +1,6 @@
+framework module WTCarouselFlowLayout {
+  umbrella header "WTCarouselFlowLayout-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,22 @@
+PODS:
+  - Nimble (5.1.1)
+  - Quick (1.0.0)
+  - WTCarouselFlowLayout (0.1.0)
+
+DEPENDENCIES:
+  - Nimble (~> 5.1.1)
+  - Quick (~> 1.0.0)
+  - WTCarouselFlowLayout (from `../`)
+
+EXTERNAL SOURCES:
+  WTCarouselFlowLayout:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
+  Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
+  WTCarouselFlowLayout: 18d32b3f088b58020581f2d5dda5e78cfb394e09
+
+PODFILE CHECKSUM: 99f88af07cae823eb10d26d84b50e5dcffdfeed2
+
+COCOAPODS: 1.2.1
