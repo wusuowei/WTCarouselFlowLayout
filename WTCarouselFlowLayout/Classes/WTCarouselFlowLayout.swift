@@ -13,7 +13,7 @@ public enum WTCarouselFlowLayoutSpacingMode {
     case overlap(visibleOffset: CGFloat)
 }
 
-class WTCarouselFlowLayout: UICollectionViewFlowLayout {
+public class WTCarouselFlowLayout: UICollectionViewFlowLayout {
     fileprivate struct LayoutState {
         var size: CGSize
         var direction: UICollectionViewScrollDirection
