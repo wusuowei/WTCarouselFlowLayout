@@ -20,6 +20,7 @@
 ![image](./DemoResources/CarouselBottom.gif)
 
 - ```WTCarouselFlowLayoutSpacingMode.overlap(overlapSpacing: 15)```
+
 ![image](./DemoResources/CarouselOverlap.gif)
 
 
