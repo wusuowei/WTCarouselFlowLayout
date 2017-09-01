@@ -71,6 +71,9 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.scrollToItem(at: indexPath, at: UICollectionViewScrollPosition.centeredHorizontally, animated: true)
         selectedIndex = indexPath.row
+    }
+
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
         refreshView()
     }
 
