@@ -5,20 +5,57 @@
 [![License](https://img.shields.io/cocoapods/l/WTCarouselFlowLayout.svg?style=flat)](http://cocoapods.org/pods/WTCarouselFlowLayout)
 [![Platform](https://img.shields.io/cocoapods/p/WTCarouselFlowLayout.svg?style=flat)](http://cocoapods.org/pods/WTCarouselFlowLayout)
 
-## Example
+**WTCarouselFlowLayout** is flow layout for **UICollectionView**.
 
-```WTCarouselFlowLayoutBaselineType.top```
+- ```WTCarouselFlowLayoutBaselineType.top```
+
 ![image](./DemoResources/CarouselTop.gif)
+
+- ```WTCarouselFlowLayoutBaselineType.center```
+
+![image](./DemoResources/CarouselCenter.gif)
+
+- ```WTCarouselFlowLayoutBaselineType.bottom```
+
+![image](./DemoResources/CarouselBottom.gif)
+
+- ```WTCarouselFlowLayoutSpacingMode.overlap(overlapSpacing: 15)```
+![image](./DemoResources/CarouselOverlap.gif)
+
 
 ## Requirements
 
+- iOS 8.0+
+
 ## Installation
+
+### CocoaPods
 
 WTCarouselFlowLayout is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod "WTCarouselFlowLayout"
+```
+
+### Carthage
+
+github "wusuowei/WTCarouselFlowLayout"
+
+## Example
+
+Via code
+
+```
+import UPCarouselFlowLayout
+```
+
+Create a UPCarouselFlowLayout object, set its itemSize and assign it to your UICollectionView.
+
+```
+let layout = UPCarouselFlowLayout()
+layout.itemSize = CGSizeMake(200, 200)
+collectionView.collectionViewLayout = layout
 ```
 
 ## Author
