@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
 
   s.description      = 'WTCarouselFlowLayout one kind of collectView layout to show carousel list.'
 
-  s.homepage         = 'https://github.com/1206860151@qq.com/WTCarouselFlowLayout'
+  s.homepage         = 'https://github.com/wusuowei/WTCarouselFlowLayout'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '1206860151@qq.com' => 'wentianen@xingshulin.com' }
