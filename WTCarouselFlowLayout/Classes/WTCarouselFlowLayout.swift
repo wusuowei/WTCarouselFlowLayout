@@ -9,15 +9,40 @@
 import UIKit
 
 public enum WTCarouselFlowLayoutSpacingMode {
-    case between(spacing: CGFloat)
-    case overlap(overlapSpacing: CGFloat)
+    case between(spacing: CGFloat)          // between items spacing
+    case overlap(overlapSpacing: CGFloat)   // two items overlap spacing
+}
+
+public enum WTCarouselFlowLayoutBaselineType: Int {
+    case top
+    case center
+    case bottom
 }
 
 public class WTCarouselFlowLayout: UICollectionViewFlowLayout {
+    /**
+     * beside item scale to show
+     * value range 0-1,default value 0.7
+     */
     @IBInspectable open var sideItemScale: CGFloat = 0.7
+    /**
+     * beside item alpha to show
+     * value range 0-1,default value 0.7
+     */
     @IBInspectable open var sideItemAlpha: CGFloat = 0.7
-    @IBInspectable open var sideItemShift: CGFloat = 0.0
+
+    /**
+     * to control minimumLineSpacing
+     */
     open var spacingMode = WTCarouselFlowLayoutSpacingMode.between(spacing: 20)
+    /**
+     * scroll direction beside items baseline type
+     */
+    @IBInspectable open var sideItemBaselineType = WTCarouselFlowLayoutBaselineType.center
+    /**
+     * base on sideItemBaselineType, you can adjust the baseline offset by this value
+     */
+    @IBInspectable open var sideItemOffset: CGFloat = 0.0
 
     override open func prepare() {
         super.prepare()
@@ -69,21 +94,31 @@ public class WTCarouselFlowLayout: UICollectionViewFlowLayout {
         guard let collectionView = self.collectionView else { return attributes }
         let isHorizontal = (self.scrollDirection == .horizontal)
 
-        let collectionCenter = isHorizontal ? collectionView.frame.size.width/2 : collectionView.frame.size.height/2
+        let collectionCenter = isHorizontal ? collectionView.frame.size.width / 2 : collectionView.frame.size.height / 2
         let offset = isHorizontal ? collectionView.contentOffset.x : collectionView.contentOffset.y
         let normalizedCenter = (isHorizontal ? attributes.center.x : attributes.center.y) - offset
 
         let maxDistance = (isHorizontal ? self.itemSize.width : self.itemSize.height) + self.minimumLineSpacing
         let distance = min(abs(collectionCenter - normalizedCenter), maxDistance)
-        let ratio = (maxDistance - distance)/maxDistance
+        let ratio = (maxDistance - distance) / maxDistance
 
         let alpha = ratio * (1 - self.sideItemAlpha) + self.sideItemAlpha
         let scale = ratio * (1 - self.sideItemScale) + self.sideItemScale
-        let shift = (1 - ratio) * self.sideItemShift
         attributes.alpha = alpha
         attributes.transform3D = CATransform3DScale(CATransform3DIdentity, scale, scale, 1)
         attributes.zIndex = Int(alpha * 10)
 
+        let scrollDirectionItemHeight = isHorizontal ? itemSize.height : itemSize.width
+        var sideItemFixedOffset: CGFloat = 0
+        switch sideItemBaselineType {
+        case .top:
+            sideItemFixedOffset = -(scrollDirectionItemHeight - scrollDirectionItemHeight * self.sideItemScale) / 2
+        case .center:
+            sideItemFixedOffset = 0
+        case .bottom:
+            sideItemFixedOffset = (scrollDirectionItemHeight - scrollDirectionItemHeight * self.sideItemScale) / 2
+        }
+        let shift = (1 - ratio) * (sideItemOffset + sideItemFixedOffset)
         if isHorizontal {
             attributes.center.y += shift
         } else {
@@ -107,8 +142,7 @@ public class WTCarouselFlowLayout: UICollectionViewFlowLayout {
         if isHorizontal {
             let closest = layoutAttributes.sorted { abs($0.center.x - proposedContentOffsetCenterOrigin) < abs($1.center.x - proposedContentOffsetCenterOrigin) }.first ?? UICollectionViewLayoutAttributes()
             targetContentOffset = CGPoint(x: floor(closest.center.x - midSide), y: proposedContentOffset.y)
-        }
-        else {
+        } else {
             let closest = layoutAttributes.sorted { abs($0.center.y - proposedContentOffsetCenterOrigin) < abs($1.center.y - proposedContentOffsetCenterOrigin) }.first ?? UICollectionViewLayoutAttributes()
             targetContentOffset = CGPoint(x: proposedContentOffset.x, y: floor(closest.center.y - midSide))
         }

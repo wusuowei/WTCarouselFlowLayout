@@ -35,7 +35,12 @@ class ViewController: UIViewController {
         let layout = self.collectionView.collectionViewLayout as! WTCarouselFlowLayout
         layout.itemSize = CGSize(width: 70, height: 100)
         layout.scrollDirection = .horizontal
-        layout.spacingMode = WTCarouselFlowLayoutSpacingMode.between(spacing: 15)
+        layout.spacingMode = WTCarouselFlowLayoutSpacingMode.between(spacing: 50)
+//        layout.spacingMode = WTCarouselFlowLayoutSpacingMode.overlap(overlapSpacing: 15)
+        layout.sideItemScale = 0.7
+        layout.sideItemAlpha = 0.7
+        layout.sideItemBaselineType = .center
+        layout.sideItemOffset = 0.0
     }
 }
 
@@ -64,6 +69,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.scrollToItem(at: indexPath, at: UICollectionViewScrollPosition.centeredHorizontally, animated: true)
         selectedIndex = indexPath.row
         refreshView()
     }
