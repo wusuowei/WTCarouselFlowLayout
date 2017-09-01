@@ -19,7 +19,7 @@ class MovieModel: NSObject {
             let model = MovieModel()
             model.title = "第\(i)部电影"
             model.imageName = "\(i).jpeg"
-            model.detail = "第\(i)部电影是一部很精彩的电影， 讲述了一个脑残和另外一个脑残一起打败一帮脑残的故事。。。☺"
+            model.detail = "第\(i)部电影是一部很精彩的电影， 讲述了一个脑残和另外一个脑残一起打败一帮脑残的故事。。。☺\n故事的经过曲折离奇，扣人心弦。。。\n故事的结局。。。"
             models.append(model)
         }
         return models
