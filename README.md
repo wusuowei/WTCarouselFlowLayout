@@ -39,10 +39,6 @@ it, simply add the following line to your Podfile:
 pod "WTCarouselFlowLayout"
 ```
 
-### Carthage
-
-github "wusuowei/WTCarouselFlowLayout"
-
 ## Example
 
 Via code
