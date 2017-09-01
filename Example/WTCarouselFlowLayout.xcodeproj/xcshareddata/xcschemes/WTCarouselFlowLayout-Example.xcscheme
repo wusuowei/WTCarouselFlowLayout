@@ -52,6 +52,16 @@
                ReferencedContainer = "container:WTCarouselFlowLayout.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C535DDC41F5951490002F190"
+               BuildableName = "WTCarouselFlowLayoutTests.xctest"
+               BlueprintName = "WTCarouselFlowLayoutTests"
+               ReferencedContainer = "container:WTCarouselFlowLayout.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
