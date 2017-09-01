@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         let layout = self.collectionView.collectionViewLayout as! WTCarouselFlowLayout
         layout.itemSize = CGSize(width: 70, height: 100)
         layout.scrollDirection = .horizontal
-        layout.spacingMode = WTCarouselFlowLayoutSpacingMode.overlap(visibleOffset: 0)
+        layout.spacingMode = WTCarouselFlowLayoutSpacingMode.between(spacing: 15)
     }
 }
 

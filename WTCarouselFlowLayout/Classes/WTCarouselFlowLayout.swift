@@ -17,7 +17,7 @@ public class WTCarouselFlowLayout: UICollectionViewFlowLayout {
     @IBInspectable open var sideItemScale: CGFloat = 0.7
     @IBInspectable open var sideItemAlpha: CGFloat = 0.7
     @IBInspectable open var sideItemShift: CGFloat = 0.0
-    open var spacingMode = WTCarouselFlowLayoutSpacingMode.between(spacing: 40)
+    open var spacingMode = WTCarouselFlowLayoutSpacingMode.between(spacing: 20)
 
     override open func prepare() {
         super.prepare()
@@ -45,8 +45,8 @@ public class WTCarouselFlowLayout: UICollectionViewFlowLayout {
 
         let scrollDirectionItemWidth = isHorizontal ? itemSize.width : itemSize.height
         let scaledItemOffset = (scrollDirectionItemWidth - scrollDirectionItemWidth * self.sideItemScale) / 2
-        switch self.spacingMode {
-        case .fixed(let spacing):
+        switch spacingMode {
+        case .between(let spacing):
             self.minimumLineSpacing = spacing - scaledItemOffset
         case .overlap(let visibleOffset):
             let fullSizeSideItemOverlap = visibleOffset + scaledItemOffset
