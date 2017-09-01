@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/wusuowei/WTCarouselFlowLayout'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { '1206860151@qq.com' => 'wentianen@xingshulin.com' }
+  s.author           = { 'wentianen' => '1206860151@qq.com' }
   s.source           = { :git => 'https://github.com/wusuowei/WTCarouselFlowLayout.git', :tag => s.version.to_s }
   s.social_media_url = 'http://www.jianshu.com/u/d83ef9913d22'
 
