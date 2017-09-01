@@ -47,15 +47,21 @@ github "wusuowei/WTCarouselFlowLayout"
 Via code
 
 ```
-import UPCarouselFlowLayout
+import WTCarouselFlowLayout
 ```
 
-Create a UPCarouselFlowLayout object, set its itemSize and assign it to your UICollectionView.
+Create a WTCarouselFlowLayout object, set its itemSize and assign it to your UICollectionView.
 
 ```
-let layout = UPCarouselFlowLayout()
-layout.itemSize = CGSizeMake(200, 200)
-collectionView.collectionViewLayout = layout
+let layout = self.collectionView.collectionViewLayout as! WTCarouselFlowLayout
+layout.itemSize = CGSize(width: 70, height: 100)
+layout.scrollDirection = .horizontal
+layout.spacingMode = WTCarouselFlowLayoutSpacingMode.between(spacing: 50)
+//  layout.spacingMode = WTCarouselFlowLayoutSpacingMode.overlap(overlapSpacing: 15)
+layout.sideItemScale = 0.7
+layout.sideItemAlpha = 0.7
+layout.sideItemBaselineType = .center
+layout.sideItemOffset = 0.0
 ```
 
 ## Author
