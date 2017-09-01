@@ -63,7 +63,7 @@ layout.sideItemOffset = 0.0
 
 ## Author
 
-1206860151@qq.com, wentianen@xingshulin.com
+wentianen, 1206860151@qq.com
 
 ## License
 
