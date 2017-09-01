@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         layout.spacingMode = WTCarouselFlowLayoutSpacingMode.overlap(overlapSpacing: 15)
         layout.sideItemScale = 0.7
         layout.sideItemAlpha = 0.7
-        layout.sideItemBaselineType = .bottom
+        layout.sideItemBaselineType = .center
         layout.sideItemOffset = 0.0
     }
 }
