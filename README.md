@@ -9,19 +9,19 @@
 
 - ```WTCarouselFlowLayoutBaselineType.top```
 
-![image](./DemoResources/CarouselTop.gif)
+	![image](./DemoResources/CarouselTop.gif)
 
 - ```WTCarouselFlowLayoutBaselineType.center```
 
-![image](./DemoResources/CarouselCenter.gif)
+	![image](./DemoResources/CarouselCenter.gif)
 
 - ```WTCarouselFlowLayoutBaselineType.bottom```
 
-![image](./DemoResources/CarouselBottom.gif)
+	![image](./DemoResources/CarouselBottom.gif)
 
 - ```WTCarouselFlowLayoutSpacingMode.overlap(overlapSpacing: 15)```
 
-![image](./DemoResources/CarouselOverlap.gif)
+	![image](./DemoResources/CarouselOverlap.gif)
 
 
 ## Requirements
