@@ -61,6 +61,10 @@ layout.sideItemBaselineType = .center
 layout.sideItemOffset = 0.0
 ```
 
+## detail
+
+[iOS UICollectionView 卡片效果 传送带效果](http://www.jianshu.com/p/1a45ecdc2d5c)
+
 ## Author
 
 wentianen, 1206860151@qq.com
