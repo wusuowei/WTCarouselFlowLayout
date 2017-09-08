@@ -8,12 +8,7 @@
 
 import UIKit
 
-public enum WTCarouselFlowLayoutSpacingMode {
-    case between(spacing: CGFloat)          // between items spacing
-    case overlap(overlapSpacing: CGFloat)   // two items overlap spacing
-}
-
-public enum WTCarouselFlowLayoutBaselineType: Int {
+@objc public enum WTCarouselFlowLayoutBaselineType: Int {
     case top
     case center
     case bottom
@@ -33,8 +28,10 @@ public class WTCarouselFlowLayout: UICollectionViewFlowLayout {
 
     /**
      * to control minimumLineSpacing
+     * value range -x to x,default value 0
+     * if it is minus, it is overlap style
      */
-    open var spacingMode = WTCarouselFlowLayoutSpacingMode.between(spacing: 20)
+    open var itemSpacing: CGFloat = 0
     /**
      * scroll direction beside items baseline type
      */
@@ -70,13 +67,7 @@ public class WTCarouselFlowLayout: UICollectionViewFlowLayout {
 
         let scrollDirectionItemWidth = isHorizontal ? itemSize.width : itemSize.height
         let scaledItemOffset = (scrollDirectionItemWidth - scrollDirectionItemWidth * self.sideItemScale) / 2
-        switch spacingMode {
-        case .between(let spacing):
-            self.minimumLineSpacing = spacing - scaledItemOffset
-        case .overlap(let visibleOffset):
-            let fullSizeSideItemOverlap = visibleOffset + scaledItemOffset
-            self.minimumLineSpacing = -fullSizeSideItemOverlap
-        }
+        self.minimumLineSpacing = itemSpacing - scaledItemOffset
     }
 
     override open func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {

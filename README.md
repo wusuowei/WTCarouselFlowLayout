@@ -19,7 +19,7 @@
 
 	![image](./DemoResources/CarouselBottom.gif)
 
-- ```WTCarouselFlowLayoutSpacingMode.overlap(overlapSpacing: 15)```
+- ```layout.itemSpacing = -15```
 
 	![image](./DemoResources/CarouselOverlap.gif)
 
@@ -53,8 +53,8 @@ Create a WTCarouselFlowLayout object, set its itemSize and assign it to your UIC
 let layout = self.collectionView.collectionViewLayout as! WTCarouselFlowLayout
 layout.itemSize = CGSize(width: 70, height: 100)
 layout.scrollDirection = .horizontal
-layout.spacingMode = WTCarouselFlowLayoutSpacingMode.between(spacing: 50)
-//  layout.spacingMode = WTCarouselFlowLayoutSpacingMode.overlap(overlapSpacing: 15)
+layout.itemSpacing = 15
+//  layout.itemSpacing = -15
 layout.sideItemScale = 0.7
 layout.sideItemAlpha = 0.7
 layout.sideItemBaselineType = .center
