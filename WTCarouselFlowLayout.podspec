@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'WTCarouselFlowLayout'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'To use collectView show carousel list.'
 
   s.description      = 'WTCarouselFlowLayout one kind of collectView layout to show carousel list.'
