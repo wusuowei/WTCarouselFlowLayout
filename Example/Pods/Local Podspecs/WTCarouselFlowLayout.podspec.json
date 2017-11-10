@@ -1,6 +1,6 @@
 {
   "name": "WTCarouselFlowLayout",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "summary": "To use collectView show carousel list.",
   "description": "WTCarouselFlowLayout one kind of collectView layout to show carousel list.",
   "homepage": "https://github.com/wusuowei/WTCarouselFlowLayout",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/wusuowei/WTCarouselFlowLayout.git",
-    "tag": "0.1.0"
+    "tag": "0.2.0"
   },
   "social_media_url": "http://www.jianshu.com/u/d83ef9913d22",
   "platforms": {
