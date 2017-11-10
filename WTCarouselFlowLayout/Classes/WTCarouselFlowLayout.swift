@@ -19,27 +19,27 @@ public class WTCarouselFlowLayout: UICollectionViewFlowLayout {
      * beside item scale to show
      * value range 0-1,default value 0.7
      */
-    @IBInspectable open var sideItemScale: CGFloat = 0.7
+    @objc @IBInspectable open var sideItemScale: CGFloat = 0.7
     /**
      * beside item alpha to show
      * value range 0-1,default value 0.7
      */
-    @IBInspectable open var sideItemAlpha: CGFloat = 0.7
+    @objc @IBInspectable open var sideItemAlpha: CGFloat = 0.7
 
     /**
      * to control minimumLineSpacing
      * value range -x to x,default value 0
      * if it is minus, it is overlap style
      */
-    open var itemSpacing: CGFloat = 0
+    @objc open var itemSpacing: CGFloat = 0
     /**
      * scroll direction beside items baseline type
      */
-    @IBInspectable open var sideItemBaselineType = WTCarouselFlowLayoutBaselineType.center
+    @objc @IBInspectable open var sideItemBaselineType = WTCarouselFlowLayoutBaselineType.center
     /**
      * base on sideItemBaselineType, you can adjust the baseline offset by this value
      */
-    @IBInspectable open var sideItemOffset: CGFloat = 0.0
+    @objc @IBInspectable open var sideItemOffset: CGFloat = 0.0
 
     override open func prepare() {
         super.prepare()

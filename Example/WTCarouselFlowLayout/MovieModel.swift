@@ -9,11 +9,11 @@
 import UIKit
 
 class MovieModel: NSObject {
-    var title = ""
-    var imageName = ""
-    var detail = ""
+    @objc var title = ""
+    @objc var imageName = ""
+    @objc var detail = ""
 
-    class func movieModels() -> [MovieModel] {
+    @objc class func movieModels() -> [MovieModel] {
         var models = [MovieModel]()
         for i in 0...6 {
             let model = MovieModel()

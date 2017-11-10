@@ -14,10 +14,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var descriptionLabel: UILabel!
 
-    var selectedIndex = 0
+    @objc var selectedIndex = 0
 
-    let movieList = MovieModel.movieModels()
-    var pageSize: CGSize {
+    @objc let movieList = MovieModel.movieModels()
+    @objc var pageSize: CGSize {
         let layout = self.collectionView.collectionViewLayout as! WTCarouselFlowLayout
         var pageSize = layout.itemSize
         pageSize.width += layout.minimumLineSpacing
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         refreshView()
     }
 
-    func setupFlowLayout() {
+    @objc func setupFlowLayout() {
         let layout = self.collectionView.collectionViewLayout as! WTCarouselFlowLayout
         layout.itemSize = CGSize(width: 85, height: 125)
         layout.scrollDirection = .horizontal
@@ -59,7 +59,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         return cell
     }
 
-    func refreshView() {
+    @objc func refreshView() {
         guard selectedIndex < movieList.count else {
             return
         }

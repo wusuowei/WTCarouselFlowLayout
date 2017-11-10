@@ -9,9 +9,9 @@
 import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
-    let imageView = UIImageView()
+    @objc let imageView = UIImageView()
 
-    var model = MovieModel() {
+    @objc var model = MovieModel() {
         didSet {
             if !self.subviews.contains(self.imageView) {
                 addSubview(self.imageView)
